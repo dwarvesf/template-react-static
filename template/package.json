@@ -1,31 +1,29 @@
 {
-  "name": "<%= _.folderName %>",
-  "private": true,
+  "name": "dwarves-opensource",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "dev": "poi",
-    "build": "poi build",
-    "build:analyze": "poi build --bundle-report",
-    "serve": "serve dist -l 8000",
+    "dev": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "rm -rf dist; react-static build",
+    "build:analyze": "BUNDLE_ANALYZE=1 react-static build",
+    "serve": "serve dist -s -l 8000",
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore ."
   },
-  "dependencies": {<% if (routing) { %>
-    "@curi/core": "^1.0.0-beta.35",
-    "@curi/react": "^1.0.0-beta.26",
-    "@curi/route-active": "^1.0.0-beta.6",
-    "@hickory/browser": "^1.0.0-beta.7",<% } %>
-    "loadable-components": "2.2.2",<% if (pwa) { %>
-    "offline-plugin": "^5.0.3",<% } %>
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "nprogress": "^0.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.2.0",
+    "react-static": "^5.9.7"
   },
   "devDependencies": {
-    "@poi/plugin-bundle-report": "^10.0.1",
-    "@poi/plugin-eslint": "^10.0.2",<% if (pwa) { %>
-    "@poi/plugin-offline": "^10.0.1",<% } %>
-    "babel-eslint": "^8.2.3",
-    "babel-preset-poi": "^10.0.1",
-    "eslint": "^4.19.1",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-macros": "^2.3.0",
+    "babel-plugin-transform-imports": "^1.5.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -34,18 +32,18 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "node-sass": "^4.9.0",
-    "poi": "^10.2.9",
-    "postcss-flexbugs-fixes": "^3.3.0",
-    "purgecss-webpack-plugin": "^1.2.0",
-    "purgecss-whitelister": "^2.1.0",
-    "react-hot-loader": "^4.3.0",
-    "sass-loader": "^6.0.7",
-    "serve": "^7.2.0"<% if(tailwindcss) { %>,
-    "tailwindcss": "^0.5.3"<% } %>
+    "lqip.macro": "^0.1.5",
+    "node-sass": "^4.9.3",
+    "prettier": "^1.12.1",
+    "purgecss-webpack-plugin": "^0.22.0",
+    "purgecss-whitelister": "^1.2.0",
+    "react-hot-loader": "^4.2.0",
+    "sass-loader": "^7.1.0",
+    "serve": "^9.4.2",
+    "tailwindcss": "^0.5.2"
   },
   "resolutions": {
-    "react": "16.4.0",
-    "react-dom": "16.4.0"
+    "react": "16.4.1",
+    "react-dom": "16.4.1"
   }
 }

@@ -1,11 +1,6 @@
-# template-react-app
+# template-react-static
 
-> React template for web app, powered by [Poi](https://poi.js.org/).
-
-- [x] [prettier](https://github.com/prettier/prettier) + eslint
-- [x] PWA support (by [offline-plugin](https://github.com/NekR/offline-plugin) & [pwacompat](https://github.com/GoogleChromeLabs/pwacompat))
-- [x] [TailwindCSS](https://tailwindcss.com/) & SASS
-- [x] Routing & code splitting (by [curi](https://github.com/pshrmn/curi))
+> React template for static websites development, powered by [React Static](https://github.com/nozzle/react-static).
 
 ## Usage
 

@@ -26,13 +26,13 @@ module.exports = {
         printWidth: 80,
         tabWidth: 2,
         useTabs: false,
-        semi: true,
+        semi: false,
         singleQuote: true,
-        trailingComma: 'all',
         bracketSpacing: true,
+        trailingComma: 'es5',
       },
     ],
     'react/prop-types': 'off',
     camelcase: 'off',
   },
-};
+}

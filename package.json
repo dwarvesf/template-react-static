@@ -18,5 +18,11 @@
   "devDependencies": {
     "ava": "^0.21.0",
     "sao": "^0.22.1"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1"
+  },
+  "resolutions": {
+    "ejs": "^2.6.1"
   }
 }

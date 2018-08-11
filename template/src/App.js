@@ -1,39 +1,30 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
-<% if(routing) { %>
-import { CuriProvider } from '@curi/react';
+import React from 'react'
+import { Router, Route } from 'react-static'
+import Routes from 'react-static-routes'
 
-const App = ({ router }) => {
-  return (
-    <CuriProvider router={router}>
-      {({ response, router }) => {
-        return (
-          <main>
-            <response.body
-              params={response.params}
-              location={response.location}
-              router={router}
-            />
-          </main>
-        );
-      }}
-    </CuriProvider>
-  );
-};
-<% } else { %>
-import './App.css';
+import '@/css/tailwind.scss'
+import '@/utils/loading'
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-      <p className="App-intro text-xl">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
-};
-<% } %>
-export default hot(module)(App);
+// renderer for `<Routes>`
+const RenderRoutes = ({ getComponentForPath }) => (
+  // The default renderer uses a catch all route to recieve the pathname
+  <Route
+    path="*"
+    render={props => {
+      // The pathname is used to retrieve the component for that path
+      let Comp = getComponentForPath(props.location.pathname)
+      // The component is rendered!
+      return <Comp key={props.location.pathname} {...props} />
+    }}
+  />
+)
+
+const App = () => (
+  <main className="font-sans font-normal text-black leading-normal">
+    <Router>
+      <Routes>{RenderRoutes}</Routes>
+    </Router>
+  </main>
+)
+
+export default App
