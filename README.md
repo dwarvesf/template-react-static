@@ -1,6 +1,6 @@
 # template-react-static
 
-> React template for static websites development, powered by [React Static](https://github.com/nozzle/react-static).
+> React template for static website development, powered by [React Static](https://github.com/nozzle/react-static).
 
 ## Usage
 
