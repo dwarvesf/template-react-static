@@ -17,6 +17,7 @@
     "nprogress": "^0.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router": "^4.2.0",
     "react-static": "^5.9.7"
   },
   "devDependencies": {
