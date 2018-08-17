@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "rm -rf dist; react-static build",
     "build:analyze": "BUNDLE_ANALYZE=1 react-static build",
-    "serve": "serve dist -s -l 8000",
+    "serve": "serve dist -l 8000",
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore ."
   },
