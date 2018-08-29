@@ -11,7 +11,7 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/pages/Home',
+        component: 'src/pages/home',
       },
       {
         is404: true,
